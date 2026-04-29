@@ -22,6 +22,8 @@ const packages = [
     duration: "3–4 weeks",
     desc: "A bespoke marketing site or portfolio designed and built end-to-end. Perfect for founders, freelancers and small businesses ready to look the part.",
     features: ["Strategy & sitemap", "Custom UI design (5–8 pages)", "Hand-coded build (Next.js or Webflow)", "Responsive across every device", "SEO foundations + analytics", "30 days post-launch support"],
+    stripeUrl: "https://buy.stripe.com/REPLACE_ME_WEBSITE",
+    paypalUrl: "https://paypal.me/REPLACE_ME/4800",
   },
   {
     tag: "For ambitious teams",
@@ -30,6 +32,8 @@ const packages = [
     duration: "6–10 weeks",
     desc: "Software & SaaS design — from first wireframes to a shipped, production-ready interface. We work alongside your dev team or build with ours.",
     features: ["Product discovery workshop", "Information architecture", "Full design system", "End-to-end UI for web & mobile", "Prototyping & user testing", "Engineering handoff or build"],
+    stripeUrl: "https://buy.stripe.com/REPLACE_ME_PRODUCT",
+    paypalUrl: "https://paypal.me/REPLACE_ME/12000",
   },
   {
     tag: "Identity",
@@ -38,6 +42,8 @@ const packages = [
     duration: "2–3 weeks",
     desc: "A complete visual identity — logo, type, colour, voice — designed to live on every surface, from websites to business cards.",
     features: ["Brand strategy", "Logo + wordmark system", "Type & colour palette", "Stationery & social templates", "Brand guidelines PDF", "Source files included"],
+    stripeUrl: "https://buy.stripe.com/REPLACE_ME_BRAND",
+    paypalUrl: "https://paypal.me/REPLACE_ME/3200",
   },
 ];
 
