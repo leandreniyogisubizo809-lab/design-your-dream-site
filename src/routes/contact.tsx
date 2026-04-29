@@ -4,6 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    package: typeof search.package === "string" ? search.package : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Contact — Halftone Studio" },
@@ -19,9 +22,11 @@ const budgets = ["Under $5k", "$5k–15k", "$15k–40k", "$40k+"];
 const services = ["Web Design", "Software Design", "Brand Identity", "Development", "Not sure"];
 
 function ContactPage() {
+  const { package: pkg } = Route.useSearch();
   const [submitted, setSubmitted] = useState(false);
   const [budget, setBudget] = useState<string | null>(null);
   const [service, setService] = useState<string | null>(null);
+  const initialMessage = pkg ? `I'm interested in a quote for ${pkg}.\n\n` : "";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -96,7 +101,7 @@ function ContactPage() {
                 </Field>
 
                 <Field label="Tell us about the project">
-                  <textarea required rows={5} name="message" className="w-full bg-transparent border-b border-foreground/30 focus:border-foreground outline-none py-3 text-lg resize-none" placeholder="What are you building, who's it for, and when do you need it?" />
+                  <textarea required rows={5} name="message" defaultValue={initialMessage} className="w-full bg-transparent border-b border-foreground/30 focus:border-foreground outline-none py-3 text-lg resize-none" placeholder="What are you building, who's it for, and when do you need it?" />
                 </Field>
 
                 <button type="submit" className="inline-flex items-center gap-2 bg-ink text-cream rounded-full px-8 py-4 hover:bg-ink/90 transition">
