@@ -78,8 +78,8 @@ function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm transition ${i === 1 ? "md:bg-lime md:text-ink bg-ink text-cream hover:opacity-90" : "border border-ink hover:bg-ink hover:text-cream"}`}>
-                  Enquire →
+                <Link to="/contact" search={{ package: p.name }} className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm transition ${i === 1 ? "md:bg-lime md:text-ink bg-ink text-cream hover:opacity-90" : "border border-ink hover:bg-ink hover:text-cream"}`}>
+                  Request a quote →
                 </Link>
               </article>
             ))}
