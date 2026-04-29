@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Leo Codes" },
+      { name: "description", content: "Design Your Dream Site is a web application for selling web and software design services." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Leo Codes" },
+      { property: "og:description", content: "Design Your Dream Site is a web application for selling web and software design services." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Leo Codes" },
+      { name: "twitter:description", content: "Design Your Dream Site is a web application for selling web and software design services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2e37438d-d3b4-4fbc-b48c-32f2ca6969ad/id-preview-770fc89f--7e97fc9e-2d88-4fd8-ac22-72e7c3198a32.lovable.app-1777444246007.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2e37438d-d3b4-4fbc-b48c-32f2ca6969ad/id-preview-770fc89f--7e97fc9e-2d88-4fd8-ac22-72e7c3198a32.lovable.app-1777444246007.png" },
     ],
     links: [
       {
