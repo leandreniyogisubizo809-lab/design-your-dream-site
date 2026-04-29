@@ -101,7 +101,7 @@ function ContactPage() {
                 </Field>
 
                 <Field label="Tell us about the project">
-                  <textarea required rows={5} name="message" className="w-full bg-transparent border-b border-foreground/30 focus:border-foreground outline-none py-3 text-lg resize-none" placeholder="What are you building, who's it for, and when do you need it?" />
+                  <textarea required rows={5} name="message" defaultValue={initialMessage} className="w-full bg-transparent border-b border-foreground/30 focus:border-foreground outline-none py-3 text-lg resize-none" placeholder="What are you building, who's it for, and when do you need it?" />
                 </Field>
 
                 <button type="submit" className="inline-flex items-center gap-2 bg-ink text-cream rounded-full px-8 py-4 hover:bg-ink/90 transition">
