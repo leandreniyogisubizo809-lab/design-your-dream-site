@@ -22,9 +22,11 @@ const budgets = ["Under $5k", "$5k–15k", "$15k–40k", "$40k+"];
 const services = ["Web Design", "Software Design", "Brand Identity", "Development", "Not sure"];
 
 function ContactPage() {
+  const { package: pkg } = Route.useSearch();
   const [submitted, setSubmitted] = useState(false);
   const [budget, setBudget] = useState<string | null>(null);
   const [service, setService] = useState<string | null>(null);
+  const initialMessage = pkg ? `I'm interested in a quote for ${pkg}.\n\n` : "";
 
   return (
     <div className="min-h-screen flex flex-col">
