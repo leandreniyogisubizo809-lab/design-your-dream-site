@@ -84,9 +84,17 @@ function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" search={{ package: p.name }} className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm transition ${i === 1 ? "md:bg-lime md:text-ink bg-ink text-cream hover:opacity-90" : "border border-ink hover:bg-ink hover:text-cream"}`}>
-                  Request a quote →
-                </Link>
+                <div className="flex flex-col gap-2">
+                  <a href={p.stripeUrl} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm transition ${i === 1 ? "md:bg-lime md:text-ink bg-ink text-cream hover:opacity-90" : "bg-ink text-cream hover:opacity-90"}`}>
+                    Pay with card →
+                  </a>
+                  <a href={p.paypalUrl} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm transition border ${i === 1 ? "md:border-cream/30 md:hover:bg-cream/10 border-ink hover:bg-ink hover:text-cream" : "border-ink hover:bg-ink hover:text-cream"}`}>
+                    Pay with PayPal
+                  </a>
+                  <Link to="/contact" search={{ package: p.name }} className={`text-xs text-center mt-1 underline underline-offset-4 ${i === 1 ? "md:text-cream/60" : "text-foreground/60"}`}>
+                    Or request a custom quote
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
