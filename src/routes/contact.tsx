@@ -4,6 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    package: typeof search.package === "string" ? search.package : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Contact — Halftone Studio" },
